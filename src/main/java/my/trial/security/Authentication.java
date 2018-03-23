@@ -18,36 +18,15 @@ public class Authentication extends WebSecurityConfigurerAdapter {
                 .antMatchers("/views/login.html").anonymous()
                 .and()
                 .formLogin()
-//                .loginProcessingrl("/loginProcessor")
-//                .usernameParameter("username")
-//                .passwordParameter("password")
                 .loginPage("/views/login.html")
                 .loginProcessingUrl("/loginProcessor")
                 .usernameParameter("username").passwordParameter("password")
-                .defaultSuccessUrl("/views/a.html", true)
+                .defaultSuccessUrl("/views/Home.html", true)
                 .failureUrl("/views/login.html")
-//                .permitAll()
                 .and()
                 .logout()
                 .and().csrf().disable();
-//                .permitAll();
-
-
     }
-
-//    @Bean
-//    @Override
-//    public UserDetailsService userDetailsService() {
-//        UserDetails user =
-//                User.withDefaultPasswordEncoder()
-//                        .username("user")
-//                        .password("user")
-//                        .roles("USER")
-//                        .build();
-////        user = User.builder().build()
-//
-//        return new InMemoryUserDetailsManager(user);
-//    }
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -60,7 +39,6 @@ public class Authentication extends WebSecurityConfigurerAdapter {
                 .password("{noop}ch3coona")
                 .roles("ADMIN");
 
-//        auth.
     }
 
 

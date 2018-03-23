@@ -1,7 +1,7 @@
 package my.trial;
 
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
+    import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,18 +41,4 @@ public class SayHello {
             return designation;
         }
     }
-
-//    @RequestMapping(value = "/", method = RequestMethod.GET )
-//    @ResponseBody
-//    public Person index(HttpServletRequest request, HttpServletResponse response) throws Exception{
-//        return new Person("Ravi", "SSE");
-//    }
-
-//    @RequestMapping(value = "/", method = RequestMethod.GET )
-//    public String index() throws Exception{
-//        return "/views/login.html";
-////            return new InternalResourceView("/views/login.html");
-//    }
-
-
 }
