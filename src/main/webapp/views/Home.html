@@ -5,11 +5,15 @@
     <title>Birthday Reminder</title>
 </head>
 <body>
-<h1>Welcome to the application birthday reminder.</h1>><br>
+<link rel="stylesheet" type="text/css" href="/css/base.css">
+<h1 class="header">Welcome to the application birthday reminder.</h1><br>
 <h3>this app has all the birthdays</h3>
-<form>
-    <input name="birthdayBoy" type="text">Name of the person</input>
-    <input name="birthdayDate" type="date">Date</input>
+<form id="birthdayForm"  method="post">
+    <input id="birthdayBoy" type="text">Name of the person</input>
+    <input id="birthdayDate" type="date">Date</input>
+    <input id="auto_wish" type="checkbox">AutoWish</input>
+    <input name="submit" type="submit" onclick="ajaxPost()">Add</input>
 </form>
 </body>
+<script src="/js/base.js"></script>
 </html>
