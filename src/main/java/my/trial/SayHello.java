@@ -55,10 +55,4 @@ public class SayHello {
 //    }
 
 
-//    @RequestMapping(value = "/loginProcessor", method = RequestMethod.POST)
-//    public String loginSuccess() {
-//        return "/views/login.html";
-//    }
-
-
 }
