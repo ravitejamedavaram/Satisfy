@@ -13,6 +13,6 @@ public class BirthdayService {
 
     public Birthday newBrithdayAdd(Birthday birthday) {
         return birthdayDao.addBirthday(birthday.getDob(), birthday.getName()
-                , birthday.getAuto_wish(), "", null);
+                , birthday.getAuto_wish(), null, null);
     }
 }

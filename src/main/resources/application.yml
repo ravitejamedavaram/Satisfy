@@ -2,6 +2,7 @@ url: jdbc:sqlserver://localhost:4000
 username: AdminUser
 password: P@ssw0rd
 driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+logging.level.org.springframework.web: DEBUG
 
 
 

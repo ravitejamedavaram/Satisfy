@@ -8,6 +8,9 @@ public class Birthday {
     public String name;
     public boolean auto_wish;
 
+    public Birthday() {
+
+    }
     public Birthday(String dob, String name, boolean auto_wish) {
         this.dob = dob;
         this.name = name;
