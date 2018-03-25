@@ -1,9 +1,7 @@
 package my.trial.controllers;
 
-import my.trial.dto.NewBrithdayAdd;
 import my.trial.service.BirthdayService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +16,7 @@ public class Birthday {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
-    public NewBrithdayAdd addData(@RequestBody NewBrithdayAdd newBrithdayAdd) {
-        return birthdayService.newBrithdayAdd(newBrithdayAdd);
+    public my.trial.dto.Birthday addData(@RequestBody my.trial.dto.Birthday birthday) {
+        return birthdayService.newBrithdayAdd(birthday);
     }
 }

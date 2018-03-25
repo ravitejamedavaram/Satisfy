@@ -2,13 +2,13 @@ package my.trial.dto;
 
 
 
-public class NewBrithdayAdd {
+public class Birthday {
     private boolean added;
-    private String dob;
-    private String name;
-    private int auto_wish;
+    public String dob;
+    public String name;
+    public boolean auto_wish;
 
-    public NewBrithdayAdd(String dob, String name, int auto_wish) {
+    public Birthday(String dob, String name, boolean auto_wish) {
         this.dob = dob;
         this.name = name;
         this.auto_wish = auto_wish;
@@ -32,11 +32,11 @@ public class NewBrithdayAdd {
     }
 
 
-    public int getAuto_wish() {
+    public boolean getAuto_wish() {
         return auto_wish;
     }
 
-    public void setAuto_wish(int auto_wish) {
+    public void setAuto_wish(boolean auto_wish) {
         this.auto_wish = auto_wish;
     }
 
@@ -47,7 +47,7 @@ public class NewBrithdayAdd {
         this.added = added;
     }
 
-    public NewBrithdayAdd(boolean added){
+    public Birthday(boolean added){
         this.added=added;
     }
 }

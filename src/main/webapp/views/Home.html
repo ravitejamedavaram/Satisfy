@@ -8,12 +8,13 @@
 <link rel="stylesheet" type="text/css" href="/css/base.css">
 <h1 class="header">Welcome to the application birthday reminder.</h1><br>
 <h3>this app has all the birthdays</h3>
-<form id="birthdayForm"  method="post">
-    <input id="birthdayBoy" type="text">Name of the person</input>
-    <input id="birthdayDate" type="date">Date</input>
-    <input id="auto_wish" type="checkbox">AutoWish</input>
-    <input name="submit" type="submit" onclick="ajaxPost()">Add</input>
+<form id="birthdayForm">
+    <input name="birthdayBoy" id="birthdayBoy" type="text">Name of the person</input>
+    <input name="birthdayDate" id="birthdayDate" type="date">Date</input>
+    <input name="auto_wish" id="auto_wish" type="checkbox">AutoWish</input>
+    <input name="submit" type="submit" onclick="makeCall()">Add</input>
 </form>
 </body>
 <script src="/js/base.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" />-->
 </html>

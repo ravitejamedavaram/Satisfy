@@ -1,7 +1,7 @@
 package my.trial.service;
 
 import my.trial.dao.BirthdayDao;
-import my.trial.dto.NewBrithdayAdd;
+import my.trial.dto.Birthday;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,8 +11,8 @@ public class BirthdayService {
     @Autowired
     BirthdayDao birthdayDao;
 
-    public NewBrithdayAdd newBrithdayAdd(NewBrithdayAdd newBrithdayAdd) {
-        return birthdayDao.addBirthday(newBrithdayAdd.getDob(), newBrithdayAdd.getName()
-                , newBrithdayAdd.getAuto_wish(), "", null);
+    public Birthday newBrithdayAdd(Birthday birthday) {
+        return birthdayDao.addBirthday(birthday.getDob(), birthday.getName()
+                , birthday.getAuto_wish(), "", null);
     }
 }

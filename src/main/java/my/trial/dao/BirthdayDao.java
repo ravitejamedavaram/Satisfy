@@ -1,6 +1,6 @@
 package my.trial.dao;
 
-import my.trial.dto.NewBrithdayAdd;
+import my.trial.dto.Birthday;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +14,9 @@ public class BirthdayDao {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public NewBrithdayAdd addBirthday(String dob, String name, int auto_wish, String photo, Integer created_by) {
+    public Birthday addBirthday(String dob, String name, boolean auto_wish, String photo, Integer created_by) {
         jdbcTemplate.update("Insert into birthday(dob, name, auto_wish, photo, created_by)" +
                 " VALUES (?,?,?,?,?)", dob, name, auto_wish, photo, created_by);
-        return new NewBrithdayAdd(true);
+        return new Birthday(true);
     }
 }
