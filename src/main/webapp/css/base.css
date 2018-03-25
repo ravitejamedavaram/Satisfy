@@ -1,5 +1,11 @@
 body{
-background-color:#ac3973 ;
+    background-color:#FFF ;
+    background-image: url("../images/Calendar_Green.png");
+    background-repeat:no-repeat;
+}
+
+.titleDiv{
+    padding-right:70%;
 }
 
 .login{
@@ -17,7 +23,7 @@ input[type=text],[type=password],[type="date"]{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size:24px;
+    font-size:16px;
     font-family: "Tahoma";
 }
 
@@ -35,5 +41,5 @@ button {
 .header{
     font-family: "Tahoma";
     color: darkgoldenrod;
-    text-align: center;
+    text-align: right;
 }
