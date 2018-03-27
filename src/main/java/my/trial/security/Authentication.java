@@ -15,7 +15,7 @@ public class Authentication extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/","/views/login.html").anonymous()
+                .antMatchers("/", "/views/login.html").anonymous()
                 .and()
                 .formLogin()
                 .loginPage("/views/login.html")
