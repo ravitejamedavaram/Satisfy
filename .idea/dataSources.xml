@@ -19,5 +19,15 @@
         <property name="applicationName" value="DataGrip" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="herokuApp" uuid="eed53542-a088-40cf-aff4-ea2f8b317c63">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-174-129-225-9.compute-1.amazonaws.com:5432/d1dpvnu3ptuk2c?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</jdbc-url>
+      <driver-properties>
+        <property name="ApplicationName" value="DataGrip" />
+        <property name="sslmode" value="require" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

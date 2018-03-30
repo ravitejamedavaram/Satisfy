@@ -1,8 +1,12 @@
-url: jdbc:sqlserver://localhost:4000
-username: AdminUser
-password: P@ssw0rd
-driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+url: jdbc:postgresql://ec2-174-129-225-9.compute-1.amazonaws.com:5432/d1dpvnu3ptuk2c?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+username: xtmneuajgregei
+password: af505ae9a136979e269c187f7007bd7596da778c9cb5ce0862ad9e77964a2def
+driver: org.postgresql.Driver
 logging.level.org.springframework.web: DEBUG
+server.port: ${PORT:8080}
+
+
+
 
 
 

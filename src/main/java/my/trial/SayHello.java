@@ -19,5 +19,9 @@ public class SayHello {
         return "login";
     }
 
+    @RequestMapping(value = "/home" )
+    public String home() throws Exception{
+        return "Home";
+    }
 
 }

@@ -5,17 +5,28 @@
     <title>Birthday Reminder</title>
 </head>
 <body>
-<link rel="stylesheet" type="text/css" href="/src/main/webapp/css/base.css">
+<link rel="stylesheet" type="text/css" href="/css/base.css">
 <h1 class="header">Welcome to the application birthday reminder.</h1><br>
 
 <h3>this app has all the birthdays</h3>
 <form id="birthdayForm" method="post">
-    <input name="birthdayBoy" id="birthdayBoy" type="text">Name of the person</input>
-    <input name="birthdayDate" id="birthdayDate" type="date">Date</input>
-    <input name="auto_wish" id="auto_wish" type="checkbox">AutoWish</input>
-    <button name="submit" type="button" onclick="makeCall()">Add</button>
+        <table class="birthday">
+            <tr>
+            <th>Name of the person</th>
+            <th>Date</th>
+            <th>AutoWish</th>
+            </tr>
+            <tr>
+                <td><input name="birthdayBoy" id="birthdayBoy" type="text" /></td>
+                <td><input name="birthdayDate" id="birthdayDate" type="date" /></td>
+                <td><input name="auto_wish" id="auto_wish" type="checkbox" /></td>
+            </tr>
+            <tr>
+                <button name="submit" type="button" onclick="makeCall()">Add</button><br>
+            </tr>
+        </table>
 </form>
 </body>
-<script src="/src/main/webapp/js/base.js"></script>
+<script src="/js/base.js"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" />-->
 </html>

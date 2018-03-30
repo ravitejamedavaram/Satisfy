@@ -21,5 +21,17 @@
       <user-name>AdminUser</user-name>
       <introspection-schemas>master:wishes</introspection-schemas>
     </data-source>
+    <data-source name="herokuApp" uuid="eed53542-a088-40cf-aff4-ea2f8b317c63">
+      <database-info product="PostgreSQL" version="10.3 (Ubuntu 10.3-1.pgdg14.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>xtmneuajgregei</user-name>
+      <introspection-schemas>d1dpvnu3ptuk2c:public,wishes</introspection-schemas>
+      <ssl-config>
+        <enabled>true</enabled>
+      </ssl-config>
+    </data-source>
   </component>
 </project>

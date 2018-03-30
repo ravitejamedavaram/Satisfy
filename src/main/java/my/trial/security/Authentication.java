@@ -21,7 +21,7 @@ public class Authentication extends WebSecurityConfigurerAdapter {
                 .loginPage("/views/login.html")
                 .loginProcessingUrl("/loginProcessor")
                 .usernameParameter("username").passwordParameter("password")
-                .defaultSuccessUrl("/views/Home.html", true)
+                .defaultSuccessUrl("/home", true)
                 .failureUrl("/views/login.html")
                 .and()
                 .logout()
