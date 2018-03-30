@@ -9,6 +9,7 @@ body{
 }
 
 .login {
+    float: right;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 90px;
