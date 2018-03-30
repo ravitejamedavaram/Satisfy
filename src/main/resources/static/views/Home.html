@@ -9,8 +9,9 @@
 <h1 class="header">Welcome to the application birthday reminder.</h1><br>
 
 <h3>this app has all the birthdays</h3>
+<div class="birthday">
 <form id="birthdayForm" method="post">
-        <table class="birthday">
+        <table>
             <tr>
             <th>Name of the person</th>
             <th>Date</th>
@@ -22,10 +23,11 @@
                 <td><input name="auto_wish" id="auto_wish" type="checkbox" /></td>
             </tr>
             <tr>
-                <button name="submit" type="button" onclick="makeCall()">Add</button><br>
+                <td><button name="submit" type="button" onclick="makeCall()">Add</button></td>
             </tr>
         </table>
 </form>
+</div>
 </body>
 <script src="/js/base.js"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" />-->

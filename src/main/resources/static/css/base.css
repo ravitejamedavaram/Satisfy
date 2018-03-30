@@ -8,22 +8,25 @@ body{
     padding-right:70%;
 }
 
-.login, .birthday{
+.login {
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 90px;
     text-align: right;
 }
 
-table{
+.birthday{
+    float: right;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 90px;
-    text-align: right;
+    text-align: center;
+    border: groove;
 }
+
 
 input[type=text],[type=password],[type="date"]{
-    width: 20%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -35,7 +38,7 @@ input[type=text],[type=password],[type="date"]{
 }
 
 button {
-    width: 20%;
+    width: 100%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
