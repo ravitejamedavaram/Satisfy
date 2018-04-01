@@ -16,12 +16,12 @@ public class SayHello {
 
     @RequestMapping(value = "/" )
     public String index() throws Exception{
-        return "login";
+        return "login.html";
     }
 
     @RequestMapping(value = "/home" )
     public String home() throws Exception{
-        return "Home";
+        return "jsp/LandingPage.jsp";
     }
 
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Reminder</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/templates.css" href="/css/base.css">
+<h1 class="header">Welcome to the application birthday reminder.</h1><br>
+<h3>this app has all the birthdays</h3>
+<table>
+    <tr>
+        <td>Click here to view all registered birthdays</td>
+        <td>
+            <button onclick="viewAllBirthdays()">
+                View All
+            </button>
+        </td>
+    </tr>
+</table>
+<form id="homeForm" method="get" hidden>
+    <table>
+        <tr>
+            <th>Name of the person</th>
+            <th>Date</th>
+            <th>AutoWish</th>
+        </tr>
+        <tr>
+            <td><input name="birthdayBoy" id="birthdayBoy" type="text" /></td>
+            <td><span><input name="birthdayDate" id="birthdayDate" type="date"></span></td>
+            <td><input name="auto_wish" id="auto_wish" type="checkbox" /></td>
+        </tr>
+    </table>
+    <button name="submit" type="button" onclick="makeCall()">Add</button>
+</form>
+</body>
+<script src="/js/base.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" />-->
+</html>

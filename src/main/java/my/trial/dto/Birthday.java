@@ -1,6 +1,11 @@
 package my.trial.dto;
 
 
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.lang.Nullable;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Birthday {
     private boolean added;
@@ -11,6 +16,7 @@ public class Birthday {
     public Birthday() {
 
     }
+
     public Birthday(String dob, String name, boolean auto_wish) {
         this.dob = dob;
         this.name = name;
@@ -46,11 +52,15 @@ public class Birthday {
     public boolean isAdded() {
         return added;
     }
+
     public void setAdded(boolean added) {
         this.added = added;
     }
 
-    public Birthday(boolean added){
-        this.added=added;
+    public Birthday(boolean added) {
+        this.added = added;
     }
+
+
 }
+

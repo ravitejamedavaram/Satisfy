@@ -21,7 +21,7 @@ public class BaseConfig extends WebMvcConfigurerAdapter {
     public ViewResolver resolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/views/");
-        resolver.setSuffix(".html");
+        resolver.setSuffix("");
         resolver.setViewClass(JstlView.class);
         return resolver;
     }

@@ -52,5 +52,13 @@ button {
 .header{
     font-family: "Tahoma";
     color: darkgoldenrod;
+<<<<<<< Updated upstream:src/main/resources/static/css/base.css
     text-align: right;
 }
+=======
+    text-align: center;
+}
+
+
+
+>>>>>>> Stashed changes:src/main/webapp/css/base.css
