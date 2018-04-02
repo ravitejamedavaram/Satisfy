@@ -21,4 +21,8 @@ public class BirthdayService {
     public List getAllBirthdays() {
         return birthdayDao.getAllBirthdays();
     }
+
+    public Birthday getBirthdayByName(String name) {
+        return birthdayDao.getBirthdayByName(name);
+    }
 }

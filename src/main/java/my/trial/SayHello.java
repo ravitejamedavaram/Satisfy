@@ -21,7 +21,7 @@ public class SayHello {
 
     @RequestMapping(value = "/home" )
     public String home() throws Exception{
-        return "jsp/LandingPage.jsp";
+        return "Home.html";
     }
 
 }

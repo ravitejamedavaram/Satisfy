@@ -1,5 +1,6 @@
 package my.trial.dao;
 
+import my.trial.db.DBConnection;
 import my.trial.dto.Birthday;
 import my.trial.mapper.BirthdayMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -30,4 +31,9 @@ public class BirthdayDao {
     }
 
 
+    public Birthday getBirthdayByName(String name) {
+        List<Birthday> query = jdbcTemplate.query("SELECT * from wishes.birthday where name = " + name, new BirthdayMapper());
+        //todo
+        return null;
+    }
 }
