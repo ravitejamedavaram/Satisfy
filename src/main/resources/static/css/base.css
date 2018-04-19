@@ -14,15 +14,20 @@ body{
     margin-bottom: auto;
     margin-right: 90px;
     text-align: right;
+    width: 40%;
 }
 
 .birthday{
-    float: right;
+    display: inline-block;
+    width: 40%;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 90px;
     text-align: center;
     border: groove;
+    font-family: "Tahoma";
+    color: darkgoldenrod;
+    float: right;
 }
 
 
@@ -36,6 +41,7 @@ input[type=text],[type=password],[type="date"]{
     box-sizing: border-box;
     font-size:16px;
     font-family: "Tahoma";
+
 }
 
 button {
@@ -50,15 +56,10 @@ button {
 }
 
 .header{
+    display: inline-block;
     font-family: "Tahoma";
     color: darkgoldenrod;
-<<<<<<< Updated upstream:src/main/resources/static/css/base.css
-    text-align: right;
-}
-=======
-    text-align: center;
+    width: 100%;
+    float: right;
 }
 
-
-
->>>>>>> Stashed changes:src/main/webapp/css/base.css

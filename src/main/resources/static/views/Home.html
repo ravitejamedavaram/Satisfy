@@ -5,11 +5,11 @@
     <title>Birthday Reminder</title>
 </head>
 <body>
-<link rel="stylesheet" type="text/templates.css" href="/css/base.css">
-<h1 class="header">Welcome to the application birthday reminder.</h1><br>
-
-<h3 class="header">Add Birthdays here</h3><br>
+<link rel="stylesheet" type="text/css" href="/css/base.css">
+<link rel="shortcut icon" type="image/png" href="/images/favicons/calendar.png"/>
 <div class="birthday">
+<h1>Welcome to the birthday reminder.</h1><br>
+<h3>Add Birthdays here</h3><br>
 <form id="birthdayForm" method="post">
         <table id="newBirthday">
             <tr>
@@ -23,10 +23,14 @@
                 <td><input name="auto_wish" id="auto_wish" type="checkbox" /></td>
             </tr>
         </table>
-
-
     <button name="submit" type="button" onclick="makeCall()">Add</button>
 </form>
+    <button name="getall" type="button" onclick="viewAllBirthdays()">getall</button>
+</div>
+
+
+<div id="BirthdayList">
+
 </div>
 </body>
 <script src="/js/base.js"></script>
