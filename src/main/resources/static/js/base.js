@@ -12,30 +12,49 @@ function makeCall() {
 
 function viewAllBirthdays() {
     var request = new XMLHttpRequest();
-    var response = null;
-
     request.open('GET', '/getAllBirthdays', true);
     request.setRequestHeader("Content-type", "application/json");
     request.send();
+    request.responseType = "json";
     request.onreadystatechange = function () {
         if (request.readyState == XMLHttpRequest.DONE) {
-            alert(request.response);
+            appendTableData(request.response);
         }
-        response = JSON.parse(request.responseText);
-    };
-    var keys =response[0];
-
-
-
-    var divContainer = document.getElementById("BirthdayList");
-    var table = divContainer.createElement("TABLE");
-    // var headers = table.appendChild("TH");
-    for(name in keys){
-        // console.log(name)
-        table.appendChild("TH");
     }
+}
 
-    divContainer.innerHTML = "";
-    divContainer.appendChild(table);
+function appendTableData(response) {
+    var keys;
+    var divContainer;
+    var table;
+    var headers, rows, headerNames=[],column;
 
+    // response = JSON.parse(response);
+    debugger
+    keys = response[0];
+    table = document.getElementById("birthdayTable");
+    if (table) {
+        table.parentNode.removeChild(table);
+    }
+    divContainer = document.getElementById("BirthdayList");
+    table = document.createElement("TABLE");
+    table.id = "birthdayTable";
+    divContainer.appendChild(table)
+
+    for (name in keys) {
+        headerNames.push(name);
+        headers = document.createElement("TH");
+        headers.innerHTML = name.toUpperCase().replace("_", "-");
+        table.appendChild(headers);
+    }
+    for (var i in response) {
+        rows = document.createElement("TR");
+        table.appendChild(rows);
+        for (var j in response[i]) {
+            column = document.createElement("TD");
+            column.innerText = response[i][j];
+            rows.appendChild(column);
+        }
+
+    }
 }
