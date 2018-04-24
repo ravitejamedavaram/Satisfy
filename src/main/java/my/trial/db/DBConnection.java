@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 
+
 @Component
 @ConfigurationProperties
 public class DBConnection {
