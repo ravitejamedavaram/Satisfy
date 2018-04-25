@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up to the Birthday reminder</title>
+</head>
+<link rel="shortcut icon" type="image/png" href="/images/favicons/calendar.png"/>
+<link rel="stylesheet" type="text/css" href="/css/base.css">
+<body>
+<h1> Sign up to the birthday reminder</h1>
+<form class="birthday" id="registration" action="/signUp" method="post">
+    <table>
+        <tr>
+            <td><label>UserName:</label></td><td><input type="text" name="username"/></td>
+            <td><label>Password:</label></td><td><input type="password" name="password"/></td>
+            <td><label>Email:</label></td><td><input type="text" name="email"/></td>
+            <td><button type="button" onclick="signUpNewUser()">SignUp</button></td>
+        </tr>
+    </table>
+    <a href="/">Back to login Page</a>
+</form>
+
+</body>
+<script src="/js/base.js"></script>
+
+</html>

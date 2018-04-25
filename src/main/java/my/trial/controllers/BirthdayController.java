@@ -34,4 +34,5 @@ public class BirthdayController {
     public Birthday getBirthdayByName(@RequestBody String name){
         return birthdayService.getBirthdayByName(name);
     }
+
 }

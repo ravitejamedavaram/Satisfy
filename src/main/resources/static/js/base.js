@@ -4,7 +4,7 @@ function makeCall() {
     var name = document.getElementById("birthdayBoy").value;
     var dob = document.getElementById("birthdayDate").value;
     var auto_wish = document.getElementById("auto_wish").checked;
-    // var request = new XMLHttpRequest();
+
     request.open('POST', '/add', true);
     request.setRequestHeader("Content-type", "application/json");
     request.send(JSON.stringify({dob: dob, name: name, auto_wish: auto_wish}));
@@ -57,4 +57,18 @@ function appendTableData(response) {
         }
 
     }
+
+}
+
+function signUpNewUser() {
+    var form = document.getElementById("registration");
+    var username = form.elements.namedItem("username").value;
+    var password = form.elements.namedItem("password").value;
+    var email = form.elements.namedItem("email").value;
+
+    var request = new XMLHttpRequest();
+    request.open('POST', '/signUp', true);
+    request.setRequestHeader("Content-type", "application/json");
+    request.send(JSON.stringify({username: username, password: password, email: email}));
+
 }
