@@ -34,6 +34,14 @@ public class Encoder implements PasswordEncoder{
 
     @Override
     public boolean matches(CharSequence charSequence, String s) {
-        return true;
+        System.out.println("matches"+encodeToHash(charSequence.toString())+", "+s);
+        if (encodeToHash(charSequence.toString()).equals(s)){
+            System.out.println("matches true");
+            return true;
+        }else {
+            System.out.println("matches false");
+            return false;
+        }
+
     }
 }

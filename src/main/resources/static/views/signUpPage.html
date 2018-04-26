@@ -7,19 +7,26 @@
 <link rel="shortcut icon" type="image/png" href="/images/favicons/calendar.png"/>
 <link rel="stylesheet" type="text/css" href="/css/base.css">
 <body>
+<div class="birthday">
 <h1> Sign up to the birthday reminder</h1>
-<form class="birthday" id="registration" action="/signUp" method="post">
-    <table>
+<form id="registration" action="/signUp" method="post">
+    <table id="birthdayTable">
         <tr>
-            <td><label>UserName:</label></td><td><input type="text" name="username"/></td>
-            <td><label>Password:</label></td><td><input type="password" name="password"/></td>
-            <td><label>Email:</label></td><td><input type="text" name="email"/></td>
+            <th><label>UserName:</label></th>
+            <th><label>Password:</label></th>
+            <th><label>Email:</label></th></tr>
+        <tr>
+            <td><input type="text" name="username"/></td>
+            <td><input type="password" name="password"/></td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
             <td><button type="button" onclick="signUpNewUser()">SignUp</button></td>
         </tr>
     </table>
     <a href="/">Back to login Page</a>
 </form>
-
+</div>
 </body>
 <script src="/js/base.js"></script>
 

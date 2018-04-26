@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -25,6 +26,7 @@ public class Authentication extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         http
                 .authorizeRequests()
                 .antMatchers("/", "/views/login.html").anonymous()
@@ -39,6 +41,22 @@ public class Authentication extends WebSecurityConfigurerAdapter {
                 .logout()
                 .and().csrf().disable();
 
+
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/","/views/login.html").permitAll()
+//                .anyRequest().authenticated()
+//                .and()
+//                .formLogin()
+//                .loginPage("/loginProcessor").permitAll()
+////                .loginProcessingUrl("/loginProcessor")
+////                .usernameParameter("username").passwordParameter("password")
+//                .defaultSuccessUrl("/home", true)
+//                .failureUrl("/403")
+//                .and()
+//                .logout()
+//                .and().csrf().disable();
+
     }
 
     @Autowired
@@ -52,20 +70,20 @@ public class Authentication extends WebSecurityConfigurerAdapter {
                 .password("{noop}ch3coona")
                 .roles("ADMIN");
         String userQuery = "Select username, password, TRUE from wishes.person where username = (?)";
-        System.out.println("userquery"+ userQuery);
+        System.out.println("userquery" + userQuery);
         auth.jdbcAuthentication().dataSource(dataSource)
                 .usersByUsernameQuery(userQuery)
-        .authoritiesByUsernameQuery("Select username, 'ADMIN' from wishes.person where username = (?)")
-        .passwordEncoder(passwordEncoder());
+                .authoritiesByUsernameQuery("Select username, 'ADMIN' from wishes.person where username = (?)")
+//                .passwordEncoder(NoOpPasswordEncoder.getInstance());
+                .passwordEncoder(passwordEncoder());
 
 
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new Encoder();
     }
-
 
 
 }
