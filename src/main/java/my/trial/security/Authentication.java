@@ -41,22 +41,6 @@ public class Authentication extends WebSecurityConfigurerAdapter {
                 .logout()
                 .and().csrf().disable();
 
-
-//        http
-//                .authorizeRequests()
-//                .antMatchers("/","/views/login.html").permitAll()
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin()
-//                .loginPage("/loginProcessor").permitAll()
-////                .loginProcessingUrl("/loginProcessor")
-////                .usernameParameter("username").passwordParameter("password")
-//                .defaultSuccessUrl("/home", true)
-//                .failureUrl("/403")
-//                .and()
-//                .logout()
-//                .and().csrf().disable();
-
     }
 
     @Autowired
@@ -74,7 +58,6 @@ public class Authentication extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication().dataSource(dataSource)
                 .usersByUsernameQuery(userQuery)
                 .authoritiesByUsernameQuery("Select username, 'ADMIN' from wishes.person where username = (?)")
-//                .passwordEncoder(NoOpPasswordEncoder.getInstance());
                 .passwordEncoder(passwordEncoder());
 
 
