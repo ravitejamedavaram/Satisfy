@@ -1,4 +1,4 @@
-url: jdbc:sqlserver://10.136.22.202:4000
+url: jdbc:sqlserver://10.136.22.251:4000
 username: AdminUser
 password: P@ssw0rd
 driver: com.microsoft.sqlserver.jdbc.SQLServerDriver

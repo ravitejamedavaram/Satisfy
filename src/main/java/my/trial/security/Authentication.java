@@ -53,7 +53,7 @@ public class Authentication extends WebSecurityConfigurerAdapter {
                 .withUser("prithvi")
                 .password("{noop}ch3coona")
                 .roles("ADMIN");
-        String userQuery = "Select username, password, TRUE from wishes.person where username = (?)";
+        String userQuery = "Select username, password, 'TRUE' from wishes.person where username = (?)";
         System.out.println("userquery" + userQuery);
         auth.jdbcAuthentication().dataSource(dataSource)
                 .usersByUsernameQuery(userQuery)
