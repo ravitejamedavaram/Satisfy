@@ -52,12 +52,21 @@ public class DBConnection {
 
     @Bean
     public DataSource dbConnection(){
+//        DataSource dataSource = DataSourceBuilder
+//                .create()
+//                .url(getUrl())
+//                .username(getUsername())
+//                .password(getPassword())
+//                .driverClassName(getDriver())
+//                .build();
+//        return dataSource;
+
         DataSource dataSource = DataSourceBuilder
                 .create()
-                .url(getUrl())
-                .username(getUsername())
-                .password(getPassword())
-                .driverClassName(getDriver())
+                .url("jdbc:sqlserver://10.136.22.251:4000")
+                .username("AdminUser")
+                .password("P@ssw0rd")
+                .driverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver")
                 .build();
         return dataSource;
     }
